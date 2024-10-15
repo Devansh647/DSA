@@ -1,0 +1,13 @@
+
+class Solution {
+    public static int largest(int[] arr) {
+        //initialize max_no with the first element of the array
+        int Dev=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]>Dev){
+                Dev=arr[i];
+            }
+        }
+        return Dev;
+    }
+}
