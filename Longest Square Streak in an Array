@@ -1,0 +1,21 @@
+class Solution {
+    public int longestSquareStreak(int[] nums) {
+        int max=-1;
+        Map<Integer,Integer>streak=new HashMap<>();
+        Arrays.sort(nums);
+         //step-->1 iterate to every number in an array
+        for(int i:nums){ 
+           //step2--> find square root
+           int root=(int)Math.sqrt(i);
+           //check if th enumber is a perfectr square root or not if yes  check the number in array
+            if(root *root==i && streak.containsKey(root)){
+                streak.put(i , streak.get(root)+1);//store kr denge   
+                max=Math.max(streak.get(i),max);
+            }else{
+                streak.put(i,1);
+            }
+         } 
+        return max;
+    }
+}
+Time Complexity is O(n*logn) 
