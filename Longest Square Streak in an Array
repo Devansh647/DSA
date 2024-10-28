@@ -2,7 +2,7 @@ class Solution {
     public int longestSquareStreak(int[] nums) {
         int max=-1;
         Map<Integer,Integer>streak=new HashMap<>();
-        Arrays.sort(nums);
+        Arrays.sort(nums);//sort the array in ascending order 
          //step-->1 iterate to every number in an array
         for(int i:nums){ 
            //step2--> find square root
